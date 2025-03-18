@@ -1,9 +1,22 @@
 ## Completed by 晏景豪2251924 on 2025/3/18
 
-function_fit_tensorflow.ipynb:tensorflow实现函数拟合
-function_fit_numpy.ipynb:numpy实现函数拟合
-images:存放loss曲线图和拟合结果图
-function_fit_result.md:拟合实验报告
+---
+
+## 文件列表
+
+- **function_fit_tensorflow.ipynb**  
+  *TensorFlow 实现函数拟合*
+
+- **function_fit_numpy.ipynb**  
+  *NumPy 实现函数拟合*
+
+- **images/**  
+  *存放 loss 曲线图和拟合结果图*
+
+- **function_fit_result.md**  
+  *拟合实验报告*
+
+---
 
 # 1. 全连接神经网络
 

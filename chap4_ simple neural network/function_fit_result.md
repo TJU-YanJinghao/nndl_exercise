@@ -1,18 +1,24 @@
 # 基于 ReLU 神经网络拟合函数
 
+---
+
 ## 1. 实验目的
 
 本次实验旨在利用基于 ReLU 激活函数的神经网络拟合自定义函数。通过自行采样生成训练集和测试集，使用训练集对网络进行训练，并利用测试集验证拟合效果，从而掌握数据采集、模型构建、参数训练以及模型评估的完整流程。
 
+---
+
 ## 2. 函数定义
 
 本实验中拟合的目标函数定义为：
-  
+
 $$
 f(x)=\sin(x)+0.1x^2
 $$
 
 该函数结合了正弦函数的周期性和二次函数的抛物线趋势，呈现出较为复杂的非线性关系，是回归问题中常用的测试函数之一。
+
+---
 
 ## 3. 数据采集
 
@@ -21,6 +27,7 @@ $$
 - **训练集**：从区间 \([-5,5]\) 内使用均匀随机采样生成 1000 个样本数据。随机采样可以更好地覆盖输入空间中的随机性。
 - **测试集**：使用区间 \([-5,5]\) 上的均匀采样生成 200 个样本数据，保证曲线平滑，从而方便直观地对比模型预测结果与真实函数曲线。
 
+---
 
 ## 4. 模型描述
 
@@ -44,6 +51,8 @@ $$
 
 两种方式均成功拟合了目标函数，验证了使用 ReLU 神经网络解决回归问题的可行性。
 
+---
+
 ## 5. 拟合效果
 
 ### 5.1 损失曲线
@@ -51,25 +60,15 @@ $$
 在训练过程中，通过记录训练和测试集的均方误差损失，可以观察到模型的收敛情况。随着 epoch 增加，训练损失和测试损失逐渐下降，表明模型逐步学习到了目标函数的模式。
 
 <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./images/loss_tensorflow.png">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">loss_tensorflow</div>
+  <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,0.12), 0 2px 10px 0 rgba(34,36,38,0.08);" src="./images/loss_tensorflow.png" alt="loss_tensorflow">
+  <br>
+  <div style="color: orange; border-bottom: 1px solid #d9d9d9; display: inline-block; padding: 2px;">loss_tensorflow</div>
 </center>
 
 <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./images/loss_numpy.png">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">loss_numpy</div>
+  <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,0.12), 0 2px 10px 0 rgba(34,36,38,0.08);" src="./images/loss_numpy.png" alt="loss_numpy">
+  <br>
+  <div style="color: orange; border-bottom: 1px solid #d9d9d9; display: inline-block; padding: 2px;">loss_numpy</div>
 </center>
 
 ### 5.2 预测结果
@@ -80,25 +79,15 @@ $$
 - **曲线图**：绿色曲线表示真实的目标函数；红色曲线表示模型预测结果。
 
 <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./iamges/result_tensorflow.png">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">result_tensorflow</div>
+  <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,0.12), 0 2px 10px 0 rgba(34,36,38,0.08);" src="./images/result_tensorflow.png" alt="result_tensorflow">
+  <br>
+  <div style="color: orange; border-bottom: 1px solid #d9d9d9; display: inline-block; padding: 2px;">result_tensorflow</div>
 </center>
 
 <center>
-    <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-    src="./images/result_numpy.png">
-    <br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">result_numpy</div>
+  <img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,0.12), 0 2px 10px 0 rgba(34,36,38,0.08);" src="./images/result_numpy.png" alt="result_numpy">
+  <br>
+  <div style="color: orange; border-bottom: 1px solid #d9d9d9; display: inline-block; padding: 2px;">result_numpy</div>
 </center>
 
 从图中可以看出，模型预测曲线与真实函数曲线高度重合，说明网络已经较好地拟合了目标函数。
@@ -107,4 +96,4 @@ $$
 
 ## 6. 结论
 
-本次实验通过两种实现方式验证了基于 ReLU 神经网络对非线性回归问题的有效性。数据采集、模型构建、训练过程以及最终拟合效果均证明，该方法能够成功捕捉到函数的复杂非线性关系。对于实际问题，可进一步调节网络结构、优化参数及训练策略，以获得更高精度的拟合结果。
+本次实验通过两种实现方式验证了基于 ReLU 神经网络对非线性回归问题的有效性。数据采集、模型构建、训练过程以及最终拟合效果均证明，该方法能够成功捕捉到函数的复杂非线性关系。对于实际问题，可进一步调节网络结构、优化参数及训练策略，以获得更高精度的拟合结果.
