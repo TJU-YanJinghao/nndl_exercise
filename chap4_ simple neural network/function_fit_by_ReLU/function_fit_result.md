@@ -2,6 +2,22 @@
 
 ---
 
+## 文件列表
+
+- **function_fit_tensorflow.ipynb**  
+  *TensorFlow 实现函数拟合*
+
+- **function_fit_numpy.ipynb**  
+  *NumPy 实现函数拟合*
+
+- **images/**  
+  *存放 loss 曲线图和拟合结果图*
+
+- **function_fit_result.md**  
+  *拟合实验报告*
+
+---
+
 ## 1. 实验目的
 
 本次实验旨在利用基于 ReLU 激活函数的神经网络拟合自定义函数。通过自行采样生成训练集和测试集，使用训练集对网络进行训练，并利用测试集验证拟合效果，从而掌握数据采集、模型构建、参数训练以及模型评估的完整流程。
